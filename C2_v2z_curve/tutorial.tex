@@ -174,10 +174,10 @@ $^b$ University of Colorado, Boulder, CO}
 \maketitle
 
 There are presently two SHCI codes available for quantum chemistry problems-- one in Fortran developed by the Umrigar group
-at Cornell (primarily by Adam Holmes, with very efficient parallelisation by Matt Otten), and another in C++
+at Cornell (primarily by Adam Holmes, with very efficient parallelisation and other contributions by Matt Otten), and another in C++
 developed by the Sharma group at the University of Colorado.  There is also an SHCI program for treating the
 homogeneous electron gas developed in the Umrigar group by Junhao Li.
-Today, we will install and use the first program.
+Today, we will install and use the first program, but both the Fortran and C++ chemistry programs are available.
 
 Adam Holmes, showed in his talk the potential energy curves for the 12 lowest energy states of C$_2$, computed in a cc-pV5Z basis.
 In this tutorial, we will compute a simplified version of this -- we will do the lowest 3 states (you can easily do more if you wish)
@@ -214,5 +214,21 @@ gnuplot < i.gnu
 evince pes_C2_2z.eps
 \end{verbatim}
 \end{enumerate}
+
+\vskip 9mm
+Refs:
+\small
+
+%1) Efficient heat-bath sampling in Fock space.
+%Adam Holmes, Hitesh J. Changlani, C.J. Umrigar,
+%%http://arxiv.org/abs/1512.03757
+%J. Chem. Theory Comput.  {\bf 12}, 1561 (2016).
+
+1) Heat-bath Configuration Interaction: An efficient selected CI algorithm inspired by heat-bath sampling,
+A. A. Holmes, Norm Tubman and C. J. Umrigar, J. Chem. Theory Comput., {\bf 12}, 3674 (2016)
+
+2) Semistochastic Heat-Bath Configuration Interaction Method:
+Selected Configuration Interaction with Semistochastic Perturbation Theory
+Sandeep Sharma, A. A. Holmes, G. Jeanmairet, A. Alavi and C. J. Umrigar, J. Chem. Theory Comput., {\bf 13}, 1595 (2017).
 
 \end{document}
