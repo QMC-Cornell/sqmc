@@ -4,7 +4,7 @@ hci                               run_type
 f                                 dump_wf_var
 'chem'  1                         hamiltonian_type,ipr
 8        4                        nelec, nup
-dih                               point_group
+d2h                               point_group
 .true.                            time_sym
 1                                 z
 26                                norb
@@ -12,4 +12,4 @@ dih                               point_group
 1                                 spatial_symmetry_wf
 1                                 diagonalize_ham
 &selected_ci eps_var_sched=2*2e-3 eps_pt_big=1.e-6 n_mc=1000 /
-&hf_det lz=1, u=T/
+&hf_det hf_symmetry=2 /
