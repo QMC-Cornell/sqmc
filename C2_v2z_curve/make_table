@@ -1,0 +1,14 @@
+grep 'Total energy(1)' */o_1sigma_g* > energy_1_1sigma_g
+grep 'Total energy(2)' */o_1sigma_g* > energy_2_1sigma_g
+grep 'Total energy(1)' */o_3pi_u* > energy_1_3pi_u
+
+for file in energy*
+do
+ex $file <<_end
+1,\$s/r//
+1,\$s;/.*=               ;;
+wq
+_end
+sort -n $file > tmp$$
+mv tmp$$ $file
+done

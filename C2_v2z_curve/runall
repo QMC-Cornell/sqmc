@@ -1,0 +1,10 @@
+for r in r1* r2*
+do
+cd $r
+echo $file
+
+../../src/sqmc < i_1sigma_g > o_1sigma_g
+../../src/sqmc < i_3pi_u > o_3pi_u
+
+cd -
+done

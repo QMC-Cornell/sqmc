@@ -1,0 +1,25 @@
+2726516565436524 1346563466354361   irand_seed
+2000   1000    10  0                nstep,nblk,nblk_eq,ipr
+50 100000 1000000  w_abs_gen_begin, w_abs_gen_target, MWALK
+1. 0.                               tau_multiplier, tau
+1.0   0.0                           reweight_factor_inv_max_multiplier, reweight_factor_inv_max
+100. -19. 0.5                       population_control_expon, e_trial_initial,min_wt
+fast_heatbath 0 1.  1 1                   proposal_method, importance_sampling, r_initiator, initiator_power, initiator_rescale_power
+hci                                 run_type
+0.00100    0.0000002  0.00001 1          min_elem, pt_eps, target_error
+.false.
+.false. f                           semistoch, use_exp_proj
+'heg' 0                             hamiltonian_type,ipr
+3                                   n_dim
+0.5                                 r_s
+14 7                                n_elec n_up
+1.49 1.0  1                         cutoff_radius, cut_off_radius_trial_wf, nsym_uniq_det_trial_wf
+1                                   trial_wf_iters
+81 81                               norb_trial_wf
+1 10                                 n_initiators_trial_wf
+1 10000                           n_truncate_trial_wf
+0                                   diagonalize ham
+&selected_ci
+n_mc=200
+eps_pt_big=8.1920e-4
+/

@@ -1,0 +1,441 @@
+ MPI is ENABLED [nc=           1 ]!
+Executable: ../../sqmc
+Command line arguments: ../../sqmc -i i_det
+Opening input file >i_det<.
+          ***********************************************
+          ** SQMC (Semistochastic Quantum Monte Carlo) **
+          ***********************************************
+
+
+Executed by otten1 on 2017-02-02 13:28:80 (-0800) on master host cab670
+opening file 33
+opening file 34
+
+BEG OF sqmc CP, REAL TIME                                               0.00       0.00        0        0, Mem avail 29120.25 29024.75 29024.75
+
+random number seeds [mas2726516565436524 1346563466354361
+nstep, nblk, nblk_eq, ipr=    2000    1000   10    0
+w_abs_gen_begin, w_abs_gen_target, MWALK=      50   100000   1000000
+tau_multiplier, tau=   1.00000000   0.00000000
+reweight_factor_inv_max_multiplier, reweight_factor_inv_max=   1.00000   0.00000
+population_control_exponent, e_trial_initial, min_wt=  100.00000  -19.00000  0.50
+proposal_method, importance_sampling, r_initiator, initiator_power, initiator_min_distance, initiator_rescale_power= fast_heatbath  0  1.00  1  0 1.000
+run_type= hci
+
+&SELECTED_CI
+eps_var_sched= 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03
+eps_var, eps_pt, eps_pt_big, target_error=  1.00E-03  2.00E-07 -1.00E+00  1.00E-05
+dump_wf_var=F n_max_connections= -1.0000E+00 n_states=  1 n_mc=    -1
+
+&NATORB
+get_natorbs, use_pt=FF
+
+&NATORB
+get_natorbs, use_pt=FF
+
+not semistochastic run
+Using Linear Projector
+ NOT replacing HF state with trial wave function
+ Connections of Psi_T are NOT permanent initiators
+Cutoff weight for always proposing off-diagonal move=  0.00E+00
+ Using 128 bit integers to encode orbital occupations
+ num_words=           1 bits_per_word=         127 max number of orbitals=         127
+run_type= hci
+energy_exact=   0.00000
+hamiltonian_type= heg
+
+Homogeneous electron gas in 3 dimensions
+r_s=  0.5000
+nelec, nup, ndn=   14    7    7
+cutoff_radius, cutoff_radius_trial_wf, n_sym_uniq_det_trial_wf  1.4900  1.0000   1
+Within cutoff_radius =   1.49000 number of spatial orbitals =  19
+K Points
+    1    0.0000    0.0000    0.0000    0.00000
+    2    0.0000    0.0000    3.2345    3.23448
+    3    0.0000    0.0000   -3.2345    3.23448
+    4    0.0000    3.2345    0.0000    3.23448
+    5   -3.2345    0.0000    0.0000    3.23448
+    6    0.0000   -3.2345    0.0000    3.23448
+    7    3.2345    0.0000    0.0000    3.23448
+    8    3.2345   -3.2345    0.0000    4.57424
+    9    3.2345    0.0000   -3.2345    4.57424
+   10    0.0000    3.2345   -3.2345    4.57424
+   11   -3.2345    0.0000    3.2345    4.57424
+   12    0.0000   -3.2345    3.2345    4.57424
+   13   -3.2345    3.2345    0.0000    4.57424
+   14    3.2345    0.0000    3.2345    4.57424
+   15   -3.2345   -3.2345    0.0000    4.57424
+   16    3.2345    3.2345    0.0000    4.57424
+   17   -3.2345    0.0000   -3.2345    4.57424
+   18    0.0000    3.2345    3.2345    4.57424
+   19    0.0000   -3.2345   -3.2345    4.57424
+ HF det= 127 127
+
+For this cell, HF kinetic, exchange, total energies =   62.77112059   -4.17844563   58.59267497
+Madelung energy =-10.224153
+For this cell, HF energy including Madelung =   48.36852150
+
+Theoretical infinite cell Hartree-Fock Results
+n_dim = 3, r_s = 0.5000
+r_s = (3/(4*pi*n))^(1/3);  E_F = hbar^2*k_F^2/(2m)
+E_tot = E_kin + E_x = (3/5)E_F -(3/4)(3n/pi)^(1/3) = 1.105/r_s^2-0.458/r_s
+Kinetic energy per particle =    4.419802
+Exchange energy per particle =  -0.916331
+Total HF energy per particle =   3.503472
+Scaled by number of electrons =  14
+Kinetic energy =                61.877232
+Exchange energy =              -12.828628
+Total HF energy =               49.048603
+
+ trial_wf_iters           1
+ n_initiators_trial_wf           1
+ n_truncate_trial_wf           1
+diagonalize_ham (heg) =   0
+trial_wf_iters, norb_trial_wf, n_initiators_trial_wf, n_truncate_trial_wf:   1  81        1        1
+
+BEG OF allocate dtm_hb CP, REAL TIME                                    0.01       0.01        0        0, Mem avail 29119.85 29023.95 29023.95
+END OF allocate dtm_hb CP, REAL TIME                                    0.01       0.00        0        0, Mem avail 29119.85 29023.95 29023.95
+ Processing same spin. p =            1
+ Processing same spin. p =            2
+ Processing same spin. p =            3
+ Processing same spin. p =            4
+ Processing same spin. p =            5
+ Processing same spin. p =            6
+ Processing same spin. p =            7
+ Processing same spin. p =            8
+ Processing same spin. p =            9
+ Processing same spin. p =           10
+ Processing same spin. p =           11
+ Processing same spin. p =           12
+ Processing same spin. p =           13
+ Processing same spin. p =           14
+ Processing same spin. p =           15
+ Processing same spin. p =           16
+ Processing same spin. p =           17
+ Processing same spin. p =           18
+ Processing same spin. p =           19
+ Processing opposite spin. p =            1
+ Processing opposite spin. p =            2
+ Processing opposite spin. p =            3
+ Processing opposite spin. p =            4
+ Processing opposite spin. p =            5
+ Processing opposite spin. p =            6
+ Processing opposite spin. p =            7
+ Processing opposite spin. p =            8
+ Processing opposite spin. p =            9
+ Processing opposite spin. p =           10
+ Processing opposite spin. p =           11
+ Processing opposite spin. p =           12
+ Processing opposite spin. p =           13
+ Processing opposite spin. p =           14
+ Processing opposite spin. p =           15
+ Processing opposite spin. p =           16
+ Processing opposite spin. p =           17
+ Processing opposite spin. p =           18
+ Processing opposite spin. p =           19
+           1           0           0  0.16386061278405106     
+           0          -1           0  0.16386061278405106     
+          -1           0           0  0.16386061278405106     
+           0           1           0  0.16386061278405106     
+           0           0          -1  0.16386061278405106     
+           0           0           1  0.16386061278405106     
+           1           0           1  8.19303063920255314E-002
+          -1          -1           0  8.19303063920255314E-002
+           1           1           0  8.19303063920255314E-002
+          -1           0          -1  8.19303063920255314E-002
+           0           1           1  8.19303063920255314E-002
+           0          -1          -1  8.19303063920255314E-002
+           1          -1           0  8.19303063920255314E-002
+           1           0          -1  8.19303063920255314E-002
+           0           1          -1  8.19303063920255314E-002
+          -1           0           1  8.19303063920255314E-002
+           0          -1           1  8.19303063920255314E-002
+          -1           1           0  8.19303063920255314E-002
+          -1           1          -1  5.46202042613503497E-002
+          -1          -1          -1  5.46202042613503497E-002
+           1           1          -1  5.46202042613503497E-002
+          -1           1           1  5.46202042613503497E-002
+           1           1           1  5.46202042613503497E-002
+          -1          -1           1  5.46202042613503497E-002
+           1          -1          -1  5.46202042613503497E-002
+           1          -1           1  5.46202042613503497E-002
+           0           0           2  4.09651531960127657E-002
+           0          -2           0  4.09651531960127657E-002
+           2           0           0  4.09651531960127657E-002
+           0           2           0  4.09651531960127657E-002
+          -2           0           0  4.09651531960127657E-002
+           0           0          -2  4.09651531960127657E-002
+           0           2          -1  3.27721225568102098E-002
+          -1           2           0  3.27721225568102098E-002
+           1           0          -2  3.27721225568102098E-002
+           2           1           0  3.27721225568102098E-002
+           2           0           1  3.27721225568102098E-002
+           2           0          -1  3.27721225568102098E-002
+           1           2           0  3.27721225568102098E-002
+           0           2           1  3.27721225568102098E-002
+          -2           0           1  3.27721225568102098E-002
+          -2           1           0  3.27721225568102098E-002
+          -2          -1           0  3.27721225568102098E-002
+          -2           0          -1  3.27721225568102098E-002
+           0          -1          -2  3.27721225568102098E-002
+          -1           0           2  3.27721225568102098E-002
+           0          -1           2  3.27721225568102098E-002
+           1           0           2  3.27721225568102098E-002
+           0           1           2  3.27721225568102098E-002
+          -1           0          -2  3.27721225568102098E-002
+           2          -1           0  3.27721225568102098E-002
+           0           1          -2  3.27721225568102098E-002
+           0          -2          -1  3.27721225568102098E-002
+          -1          -2           0  3.27721225568102098E-002
+           0          -2           1  3.27721225568102098E-002
+           1          -2           0  3.27721225568102098E-002
+           1           2          -1  2.73101021306751748E-002
+          -1           1          -2  2.73101021306751748E-002
+           2          -1           1  2.73101021306751748E-002
+           1          -2          -1  2.73101021306751748E-002
+           1          -1          -2  2.73101021306751748E-002
+           2           1          -1  2.73101021306751748E-002
+          -1          -2           1  2.73101021306751748E-002
+          -2          -1          -1  2.73101021306751748E-002
+          -1          -1          -2  2.73101021306751748E-002
+           2           1           1  2.73101021306751748E-002
+           1           2           1  2.73101021306751748E-002
+          -1          -2          -1  2.73101021306751748E-002
+           1           1           2  2.73101021306751748E-002
+          -2           1          -1  2.73101021306751748E-002
+          -1           2           1  2.73101021306751748E-002
+          -2           1           1  2.73101021306751748E-002
+          -1           2          -1  2.73101021306751748E-002
+          -1          -1           2  2.73101021306751748E-002
+          -2          -1           1  2.73101021306751748E-002
+          -1           1           2  2.73101021306751748E-002
+           1          -2           1  2.73101021306751748E-002
+           1          -1           2  2.73101021306751748E-002
+           0          -2          -2  2.04825765980063829E-002
+          -2           2           0  2.04825765980063829E-002
+           2           2           0  2.04825765980063829E-002
+          -2           0          -2  2.04825765980063829E-002
+          -2           0           2  2.04825765980063829E-002
+           0          -2           2  2.04825765980063829E-002
+ Max double excitation magnitude=   42.048225052565400     
+
+BEG OF HCI_HEG CP, REAL TIME                                            0.01       0.00        0        0, Mem avail 29119.34 29023.47 29023.47
+
+Performing HCI with eps_var_sched=  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03, eps_pt=  2.0000E-07
+Computing  1 lowest-energy states
+Iteration   0        1 =  1.00E+00 dets, energy=       58.592675
+ Allocating shared memory of size                    8
+
+BEG OF variational part CP, REAL TIME                                   0.02       0.00        0        0, Mem avail 29118.72 29022.61 29022.61
+
+HCI iter=  1 eps_var=  1.0000E-03
+
+BEG OF get_next_det_list CP, REAL TIME                                  0.02       0.00        0        0, Mem avail 29118.72 29022.62 29022.62
+n_connected_dets,n_ref=         0         1
+allocating dets_up etc. arrays of size         2 = 2.0000E+00
+allocating (for merging) iorder etc. arrays of size         0 = 0.0000E+00
+reallocating dets_up etc. arrays of size       279 = 2.7900E+02
+
+After allocating dets_up of size       279, Memory avail (MB)=                                                       29118.72 29022.66 29022.66
+
+After allocating dets_dn of size       279, Memory avail (MB)=                                                       29118.72 29022.67 29022.67
+
+After allocating old_dets_up of size       279, Memory avail (MB)=                                                   29118.72 29022.67 29022.67
+
+After allocating old_dets_dn of size       279, Memory avail (MB)=                                                   29118.72 29022.67 29022.67
+ Allocating shared memory of size                 2216
+END OF get_next_det_list CP, REAL TIME                                  0.03       0.01        0        0, Mem avail 29118.72 29022.73 29022.73
+
+BEG OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.03       0.00        0        0, Mem avail 29118.72 29022.74 29022.74
+
+BEG OF generate_sparse_ham_heg_upper_triangular CP, REAL TIME           0.04       0.00        0        0, Mem avail 29118.21 29022.26 29022.26
+Constructing sparse Hamiltonian using partial connections
+allocating H_indices etc. arrays of size nonzero_elements (estimated)=      4610 = 4.61E+03 in generate_sparse_ham_chem
+
+BEG OF allocating H_indices etc. CP, REAL TIME                          0.04       0.00        0        0, Mem avail 29118.21 29022.27 29022.27
+END OF allocating H_indices etc. CP, REAL TIME                          0.04       0.00        0        0, Mem avail 29118.21 29022.21 29022.21
+
+BEG OF create beta and alpha-1 helper lists CP, REAL TIME               0.04       0.00        0        0, Mem avail 29118.21 29022.21 29022.21
+END OF create beta and alpha-1 helper lists CP, REAL TIME               0.05       0.00        0        0, Mem avail 29118.21 29022.27 29022.27
+
+n_det=         277  2.77E+02, # of nonzero elem in H=          3511  3.51E+03, average # of nonzero elem=    12.7
+
+END OF generate_sparse_heg_heg_upper_triangular CP, REAL TIME           0.06       0.01        0        0, Mem avail 29118.10 29022.12 29022.12
+
+Performing Davidson using sparsely stored H and matrix_lanczos in more_tools, n_det=       277  2.77E+02
+
+BEG OF davidson_sparse CP, REAL TIME                                    0.06       0.00        0        0, Mem avail 29118.10 29022.13 29022.13
+
+Executing davidson_sparse in more_tools.f90
+Iteration, Eigenvalues=  1    58.592674968
+Iteration, Eigenvalues=  2    58.283365868
+Iteration, Eigenvalues=  3    58.282597355
+Iteration, Eigenvalues=  4    58.282596705
+Iteration, Eigenvalues=  5    58.282596705
+davidson_sparse: n, iter, Lowest eigenvalue =       277   6    58.2825967049
+END OF davidson_sparse CP, REAL TIME                                    0.07       0.00        0        0, Mem avail 29118.28 29020.18 29020.18
+
+Wavefunction has     277 determinants
+
+Lowest eigenvalues=    58.282597
+
+Excit_level  # dets  sum_w2_excit_level
+       0       1    0.975642
+       2     276    0.024358
+
+Orbital sum_w2_orb
+     1    1.999744
+     2    1.991923
+     3    1.991923
+     4    1.991923
+     5    1.991923
+     6    1.991923
+     7    1.991923
+     8    0.004060
+     9    0.004060
+    10    0.004060
+    11    0.004060
+    12    0.004060
+    13    0.004060
+    14    0.004060
+    15    0.004060
+    16    0.004060
+    17    0.004060
+    18    0.004060
+    19    0.004060
+END OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.07       0.00        0        0, Mem avail 29118.28 29020.18 29020.18
+Iteration   1      277 =  2.77E+02 dets, energy=       58.282597
+
+HCI iter=  2 eps_var=  1.0000E-03
+
+BEG OF get_next_det_list CP, REAL TIME                                  0.07       0.00        0        0, Mem avail 29118.28 29020.18 29020.18
+n_connected_dets,n_ref=         0       277
+allocating dets_up etc. arrays of size     33938 = 3.3938E+04
+ Allocating shared memory of size                75800
+END OF get_next_det_list CP, REAL TIME                                  0.10       0.02        0        0, Mem avail 29115.12 29019.12 29019.12
+
+BEG OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.10       0.00        0        0, Mem avail 29115.52 29019.52 29019.52
+
+BEG OF generate_sparse_ham_heg_upper_triangular CP, REAL TIME           0.10       0.00        0        0, Mem avail 29115.52 29019.52 29019.52
+Constructing sparse Hamiltonian using partial connections
+allocating H_indices etc. arrays of size nonzero_elements (estimated)=    157695 = 1.58E+05 in generate_sparse_ham_chem
+
+BEG OF allocating H_indices etc. CP, REAL TIME                          0.10       0.00        0        0, Mem avail 29115.52 29019.52 29019.52
+END OF allocating H_indices etc. CP, REAL TIME                          0.11       0.00        0        0, Mem avail 29112.98 29016.98 29016.98
+
+BEG OF create beta and alpha-1 helper lists CP, REAL TIME               0.11       0.00        0        0, Mem avail 29112.98 29016.98 29016.98
+END OF create beta and alpha-1 helper lists CP, REAL TIME               0.12       0.01        0        0, Mem avail 29110.95 29015.11 29015.11
+Reallocating from size        157695 to size        222980
+
+n_det=        9475  9.48E+03, # of nonzero elem in H=        165193  1.65E+05, average # of nonzero elem=    17.4
+
+END OF generate_sparse_heg_heg_upper_triangular CP, REAL TIME           0.83       0.71        1        1, Mem avail 29103.72 29006.11 29006.11
+
+Performing Davidson using sparsely stored H and matrix_lanczos in more_tools, n_det=      9475  9.48E+03
+
+BEG OF davidson_sparse CP, REAL TIME                                    0.83       0.00        1        0, Mem avail 29103.72 29006.11 29006.11
+
+Executing davidson_sparse in more_tools.f90
+Iteration, Eigenvalues=  1    58.282596705
+Iteration, Eigenvalues=  2    58.277016054
+Iteration, Eigenvalues=  3    58.276908475
+Iteration, Eigenvalues=  4    58.276906107
+Iteration, Eigenvalues=  5    58.276906085
+Iteration, Eigenvalues=  6    58.276906085
+davidson_sparse: n, iter, Lowest eigenvalue =      9475   7    58.2769060846
+END OF davidson_sparse CP, REAL TIME                                    0.86       0.03        1        0, Mem avail 29099.54 28930.27 28930.27
+
+Wavefunction has    9475 determinants
+
+Lowest eigenvalues=    58.276906
+
+Excit_level  # dets  sum_w2_excit_level
+       0       1    0.974536
+       2     276    0.025224
+       3    1464    0.000016
+       4    7734    0.000224
+
+Orbital sum_w2_orb
+     1    1.999716
+     2    1.991482
+     3    1.991482
+     4    1.991482
+     5    1.991482
+     6    1.991482
+     7    1.991482
+     8    0.004283
+     9    0.004283
+    10    0.004283
+    11    0.004283
+    12    0.004283
+    13    0.004283
+    14    0.004283
+    15    0.004283
+    16    0.004283
+    17    0.004283
+    18    0.004283
+    19    0.004283
+END OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.86       0.00        1        0, Mem avail 29106.27 29006.12 28930.32
+Iteration   2     9475 =  9.48E+03 dets, energy=       58.276906
+
+HCI iter=  3 eps_var=  1.0000E-03
+
+BEG OF get_next_det_list CP, REAL TIME                                  0.87       0.00        1        0, Mem avail 29106.27 29006.39 28930.58
+n_connected_dets,n_ref=         0      9475
+allocating dets_up etc. arrays of size     50028 = 5.0028E+04
+ Allocating shared memory of size                75800
+END OF get_next_det_list CP, REAL TIME                                  0.90       0.04        1        0, Mem avail 29106.29 29006.66 28930.85
+Exiting variational part because of energy criterion
+END OF variational part CP, REAL TIME                                   0.91       0.00        1        0, Mem avail 29106.29 29006.66 28930.85
+ Deallocating Hamiltonian
+
+Final Iteration   2     9475 =  9.48E+03 dets, energy=       58.276906
+Final variational wavefunctions (20 sorted by label):
+           1 127 127  0.98718577952144071     
+           2 127 699 -8.27831715153684936E-003
+           3 127 1245 -8.27831715153684936E-003
+           4 127 1327 -1.00594078586842672E-002
+           5 127 1401  1.00594078586842672E-002
+           6 127 1639 -8.27831715153685456E-003
+           7 127 2335  8.27831715153685456E-003
+           8 127 2647  1.00594078586842672E-002
+           9 127 2681  1.00594078586842672E-002
+          10 127 4271 -1.00594078586842672E-002
+          11 127 4311 -1.00594078586842672E-002
+          12 127 4467 -8.27831715153685456E-003
+          13 127 6253 -8.27831715153685456E-003
+          14 127 8759 -8.27831715153684936E-003
+          15 127 12405 -8.27831715153684936E-003
+          16 127 16731 -8.27831715153684936E-003
+          17 127 17003  8.27831715153684936E-003
+          18 127 24669  8.27831715153684242E-003
+          19 127 33909  8.27831715153684936E-003
+          20 127 34877 -8.27831715153685456E-003
+
+Before det. PT, avail, avail2, avail3=                                                                               29107.31 29011.99 28930.03
+
+n_max_connections:   110000000 =  1.10E+08
+
+Computing PT correction for state number   1
+
+If eps_pt=     2.0000E-07 estimated number of connections to variational wavefn=     1911865 =  1.91E+06
+
+Computing PT energy using straightforward deterministic method
+
+BEG OF Compute deterministic 2nd-order PT correction CP, REAL TIM       0.93       0.03        1        0, Mem avail 29107.20 29011.90 28929.93
+n_connected_dets,n_ref=         0      9475
+allocating dets_up etc. arrays of size   2867798 = 2.8678E+06
+Total number of connected dets=      501881 =  5.02E+05
+END OF Compute deterministic 2nd-order PT correction CP, REAL TIM      10.88       9.95       11       10, Mem avail 29092.03 28959.00 28537.41
+
+PT_correction, eps_pt, ndets_connected for fully deterministic run=   -0.000939196  2.0000E-07      501881 =  5.02E+05
+
+State   1:
+Variational energy=                   58.276906085
+Second-order PT energy lowering=      -0.000939196
+Total energy=                         58.275966889
+ndets, ndets_connected(total), Variational, PT, Total Energies=     9475     501881    58.276906085   -0.000939196    58.275966889
+Total energy (includ. Madelung)=      48.051813420
+Correlation energy =                  -0.316708079
+Correlation energy per electron =     -0.022622006
+END OF HCI_HEG CP, REAL TIME                                           10.89       0.00       11        0, Mem avail 29191.93 29096.65 28537.39

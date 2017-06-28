@@ -1,0 +1,218 @@
+% Issues related to QMC on infinite systems.
+\tolerance = 10000
+%\documentstyle[aps]{revtex}
+%\documentclass[12pt,twoside,fleqn]{article}
+%\documentclass[aps,prl,twocolumn,groupedaddress,showpacs]{revtex4}
+%\documentclass[aps,prl,groupedaddress]{revtex4}
+\documentclass[12pt,aps,prb,groupedaddress,amsmath,amssymb]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{epsf,color}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}% Needed for \overbar, but did not work anyway
+\usepackage{float, rotating, rotfloat}
+%\usepackage{capt-of}
+\usepackage[section]{placeins} % Prevent figures from moving across sections.
+
+\textwidth 7.5in
+\textheight 10.0in
+
+%\voffset -5mm
+\topmargin -25mm
+
+\oddsidemargin -11mm
+\evensidemargin -11mm
+
+\parindent=0cm
+\parskip .15in plus .1in minus .05in
+\linespread{1.15}
+
+\pagestyle{fancy}
+%\fancyhead[LE,RO]{\slshape \rightmark}
+\fancyhead[LE,RO]{\slshape SHCI tutorial}
+\fancyhead[LO,RE]{\slshape Umrigar group}
+\fancyfoot[C]{\thepage}
+
+%\input vmc.def
+%\input dmc.def
+%\input projectors.def
+
+\def\erf{{\rm erf}}
+\def\erfc{{\rm erfc}}
+\def\intr{\int_0^\infty{\rm d}r}
+\def\intrinf{\int_0^\infty{\rm d}r}
+\def\intrrc{\int_{r_c}^\infty{\rm d}r}
+\def\dr{{\rm d}r}
+
+\def\psii{\psi_{i}}
+\def\psij{\psi_{j}}
+\def\psiij{\psi_{ij}}
+\def\psisq{\psi^2}
+\def\psironeN{\psi({\bf r}_1,{\bf r}_2,...{\bf r}_N)}
+\def\psir1pN{\psi({\bf r}'_1,{\bf r}_2,...{\bf r}_N)}
+% \def\psir1jpN{\psi({\bf r}'_{1j},{\bf r}_2,...{\bf r}_N)}
+%\def\langle{\left\langle}
+%def\rangle{\right\rangle}
+\def\ranglep{\rangle_{\psisq}}
+\def\Hpsibypsi{{H \psi \over \psi}}
+\def\Hpsiibypsi{{H \psii \over \psi}}
+\def\HmEpsibypsi{{(H-E) \psi \over \psi}}
+\def\HmEpsiibypsi{{(H-E) \psii \over \psi}}
+\def\HmEpsijbypsi{{(H-E) \psij \over \psi}}
+\def\psiibypsi{{\psii \over \psi}}
+\def\psijbypsi{{\psij \over \psi}}
+\def\psiijbypsi{{\psiij \over \psi}}
+\def\EL{E_{\rm L}}
+\def\ELi{E_{{\rm L},i}}
+
+\def\rvec{{\bf r}}
+\def\gvec{{\bf g}}
+\def\gmax{g_{\rm max}}
+\def\rhovec{{\mathbf \rho}}
+\def\Lvec{{\bf L}}
+\def\Rvec{{\bf R}}
+\def\kvec{{\bf k}}
+\def\Gvec{{\bf G}}
+\def\Gpvec{{\bf G}_p}
+\def\kpvec{{\bf k}_p}
+\def\Gsvec{{\bf G}_s}
+\def\ksvec{{\bf k}_s}
+\def\Rsvec{{\bf R}_s}
+\def\kpg{\kvec+\Gvec}
+\def\kmg{\kvec-\Gvec}
+\def\mkpg{-\kvec+\Gvec}
+\def\mkmg{-\kvec-\Gvec}
+\def\kr{\kvec\cdot\rvec}
+\def\Gr{\Gvec\cdot\rvec}
+\def\kpgr{(\kpg)\cdot\rvec}
+\def\kmgr{(\kmg)\cdot\rvec}
+\def\uk{u_{\kvec}}
+\def\psik{\psi_{\kvec}}
+\def\psimk{\psi_{-\kvec}}
+\def\sumg{{\sum_{\Gvec}}}
+\def\sumgp{{\sum_{\Gvec^+}}}
+\def\egr{e^{i \Gvec\cdot\rvec}}
+\def\emgr{e^{-i \Gvec\cdot\rvec}}
+\def\ekr{e^{i \kvec\cdot\rvec}}
+\def\emkr{e^{-i \kvec\cdot\rvec}}
+\def\eppkpgr{e^{i (\kpg)\cdot\rvec}}
+\def\eppkmgr{e^{i (\kmg)\cdot\rvec}}
+\def\empkpgr{e^{-i (\kpg)\cdot\rvec}}
+\def\empkmgr{e^{-i (\kmg)\cdot\rvec}}
+\def\epmkpgr{e^{i (\mkpg)\cdot\rvec}}
+\def\epmkmgr{e^{i (\mkmg)\cdot\rvec}}
+\def\ck{{c_{\kvec}}}
+\def\cmk{{c_{-\kvec}}}
+\def\ckpg{{c_{\kpg}}}
+\def\ckmg{{c_{\kmg}}}
+\def\cmkpg{{c_{\mkpg}}}
+\def\cmkmg{{c_{\mkmg}}}
+\def\csk{{c^*_{\kvec}}}
+\def\csmk{{c^*_{-\kvec}}}
+\def\cskpg{{c^*_{\kpg}}}
+\def\cskmg{{c^*_{\kmg}}}
+\def\csmkpg{{c^*_{\mkpg}}}
+\def\csmkmg{{c^*_{\mkmg}}}
+\def\coskr{\cos{\kr}}
+\def\sinkr{\sin{\kr}}
+\def\cosGr{\cos{\Gr}}
+\def\sinGr{\sin{\Gr}}
+\def\coskpgr{\cos{\kpgr}}
+\def\sinkpgr{\sin{\kpgr}}
+\def\coskmgr{\cos{\kmgr}}
+\def\sinkmgr{\sin{\kmgr}}
+\def\Ylm{Y_{lm}}
+\def\Ylmo{Y_{lm}(\Omega)}
+\def\Ylmop{Y_{lm}(\Omega')}
+\def\Ylmoone{Y_{lm}(\Omega_1)}
+\def\Ylmoonep{Y_{lm}(\Omega_1')}
+
+\def\taubf{{\mathbf \tau}}
+
+\def\Xbar{\overline{X}}
+\def\X2bar{\overline{X^2}}
+
+\def\V{{\cal V}}
+\def\C{{\cal C}}
+
+% &=& \ck^* \emkr + \sumgp \{\ckpg^*\empkpgr + \ckmg^*\empkmgr\}
+% psik+\psimk &=& 2 \Re \left[\ekr + \sumgp \{\ckpg\eppkpgr + \ckmg\eppkmgr\}\right]
+%\psik+\psimk &=& 2 \Re \left[\ekr + \sumgp \{\ckpg\eppkpgr + \ckmg\eppkmgr\}\right] \nonumber \\
+%&=& 2\left[\Re \ck \coskr -\Im \ck \sinkr
+% + \sumgp \Re \ckpg \coskpg - \Im \ckpg \sinkpgr
+% + \sumgp \Re \ckmg \coskmg - \Im \ckmg \sinkpmr \nonumber \\
+%&=& 2\left[\Re \ck \coskr -\Im \ck \sinkr
+% + \sumg \nonumber \\
+%&=& 2\left[\coskr\left{\Re \ck + \sumgp\left(\Re(\ckpg+\ckmg)\cosGr - \Im(\ckpg-\ckmg)\sinGr)\right)\right}
+%          -\sinkr\left{\Im \ck + \sumgp\left(\Re(\ckpg-\ckmg)\sinGr - \Im(\ckpg+\ckmg)\cosGr)\right)\right}\right]
+
+\def\PsiT{\Psi_T}
+
+\def\beq{\begin{eqnarray}}
+\def\eeq{\end{eqnarray}}
+
+\def\cf{{\it cf.}}
+\def\eg{{\it e.g.}}
+\def\etal{{\it et~al.}}
+\def\ibid{\it ibid., \rm}
+\def\etc{{\it etc.}}
+\def\ie{{\it i.e.}}
+\def\viz{{\it viz.}}
+
+\begin{document}
+
+\title{Tutorial on using the Semistochastic Heat-bath Configuration Interaction (SHCI) method}
+
+\author{Adam Holmes$^{a,b}$, Matt Otten$^a$, Junhao Li$^a$ and Cyrus J. Umrigar$^a$}
+\affiliation{
+$^a$ Theory Center and Laboratory of Atomic and Solid State Physics,\\
+Cornell University, Ithaca, NY 14853\\
+$^b$ University of Colorado, Boulder, CO}
+
+\maketitle
+
+There are presently two SHCI codes available for quantum chemistry problems-- one in Fortran developed by the Umrigar group
+at Cornell (primarily by Adam Holmes, with very efficient parallelisation by Matt Otten), and another in C++
+developed by the Sharma group at the University of Colorado.  There is also an SHCI program for treating the
+homogeneous electron gas developed in the Umrigar group by Junhao Li.
+Today, we will install and use the first program.
+
+Adam Holmes, showed in his talk the potential energy curves for the 12 lowest energy states of C$_2$, computed in a cc-pV5Z basis.
+In this tutorial, we will compute a simplified version of this -- we will do the lowest 3 states (you can easily do more if you wish)
+in a cc-pVDZ basis.
+
+\begin{enumerate}
+\item Download the code by typing:
+\begin{verbatim}
+git clone https://bitbucket.org/sqmc/hci.git --depth=1
+\end{verbatim}
+\item
+Compile the program:
+\begin{verbatim}
+cd src
+make
+\end{verbatim}
+\item
+\begin{verbatim}
+cd ../C2\_v2z_curve
+\end{verbatim}
+There are 2 input files (for $^1\Sigma_g$ and $^3\Pi_u$ symmetries and integrals files for 9 different geometries.  Take a look at one of these inputs.
+The one for $^1\Sigma_g$ computes the 2 lowest states of that symmetry and the one for $^3\Pi_u$ computes just the lowest state.
+Run all these inputs by typing:
+\begin{verbatim}
+./runall
+\end{verbatim}
+\item Make tables of all these calculations:
+\begin{verbatim}
+./make_table
+\end{verbatim}
+\item Plot the energies in the tables:
+\begin{verbatim}
+gnuplot < i.gnu
+evince pes_C2_2z.eps
+\end{verbatim}
+\end{enumerate}
+
+\end{document}

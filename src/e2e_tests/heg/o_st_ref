@@ -1,0 +1,879 @@
+ MPI is ENABLED [nc=           1 ]!
+Executable: ../../sqmc
+Command line arguments: ../../sqmc -i i_st
+Opening input file >i_st<.
+          ***********************************************
+          ** SQMC (Semistochastic Quantum Monte Carlo) **
+          ***********************************************
+
+
+Executed by otten1 on 2017-02-02 13:28:82 (-0800) on master host cab670
+opening file 33
+opening file 34
+
+BEG OF sqmc CP, REAL TIME                                               0.00       0.00        0        0, Mem avail 29233.28 29137.79 29137.78
+
+random number seeds [mas2726516565436524 1346563466354361
+nstep, nblk, nblk_eq, ipr=    2000    1000   10    0
+w_abs_gen_begin, w_abs_gen_target, MWALK=      50   100000   1000000
+tau_multiplier, tau=   1.00000000   0.00000000
+reweight_factor_inv_max_multiplier, reweight_factor_inv_max=   1.00000   0.00000
+population_control_exponent, e_trial_initial, min_wt=  100.00000  -19.00000  0.50
+proposal_method, importance_sampling, r_initiator, initiator_power, initiator_min_distance, initiator_rescale_power= fast_heatbath  0  1.00  1  0 1.000
+run_type= hci
+
+&SELECTED_CI
+eps_var_sched= 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03 1.00E-03
+eps_var, eps_pt, eps_pt_big, target_error=  1.00E-03  2.00E-07  8.19E-04  1.00E-05
+dump_wf_var=F n_max_connections= -1.0000E+00 n_states=  1 n_mc=   200
+
+&NATORB
+get_natorbs, use_pt=FF
+
+&NATORB
+get_natorbs, use_pt=FF
+
+not semistochastic run
+Using Linear Projector
+ NOT replacing HF state with trial wave function
+ Connections of Psi_T are NOT permanent initiators
+Cutoff weight for always proposing off-diagonal move=  0.00E+00
+ Using 128 bit integers to encode orbital occupations
+ num_words=           1 bits_per_word=         127 max number of orbitals=         127
+run_type= hci
+energy_exact=   0.00000
+hamiltonian_type= heg
+
+Homogeneous electron gas in 3 dimensions
+r_s=  0.5000
+nelec, nup, ndn=   14    7    7
+cutoff_radius, cutoff_radius_trial_wf, n_sym_uniq_det_trial_wf  1.4900  1.0000   1
+Within cutoff_radius =   1.49000 number of spatial orbitals =  19
+K Points
+    1    0.0000    0.0000    0.0000    0.00000
+    2    0.0000    0.0000    3.2345    3.23448
+    3    0.0000    0.0000   -3.2345    3.23448
+    4    0.0000    3.2345    0.0000    3.23448
+    5   -3.2345    0.0000    0.0000    3.23448
+    6    0.0000   -3.2345    0.0000    3.23448
+    7    3.2345    0.0000    0.0000    3.23448
+    8    3.2345   -3.2345    0.0000    4.57424
+    9    3.2345    0.0000   -3.2345    4.57424
+   10    0.0000    3.2345   -3.2345    4.57424
+   11   -3.2345    0.0000    3.2345    4.57424
+   12    0.0000   -3.2345    3.2345    4.57424
+   13   -3.2345    3.2345    0.0000    4.57424
+   14    3.2345    0.0000    3.2345    4.57424
+   15   -3.2345   -3.2345    0.0000    4.57424
+   16    3.2345    3.2345    0.0000    4.57424
+   17   -3.2345    0.0000   -3.2345    4.57424
+   18    0.0000    3.2345    3.2345    4.57424
+   19    0.0000   -3.2345   -3.2345    4.57424
+ HF det= 127 127
+
+For this cell, HF kinetic, exchange, total energies =   62.77112059   -4.17844563   58.59267497
+Madelung energy =-10.224153
+For this cell, HF energy including Madelung =   48.36852150
+
+Theoretical infinite cell Hartree-Fock Results
+n_dim = 3, r_s = 0.5000
+r_s = (3/(4*pi*n))^(1/3);  E_F = hbar^2*k_F^2/(2m)
+E_tot = E_kin + E_x = (3/5)E_F -(3/4)(3n/pi)^(1/3) = 1.105/r_s^2-0.458/r_s
+Kinetic energy per particle =    4.419802
+Exchange energy per particle =  -0.916331
+Total HF energy per particle =   3.503472
+Scaled by number of electrons =  14
+Kinetic energy =                61.877232
+Exchange energy =              -12.828628
+Total HF energy =               49.048603
+
+ trial_wf_iters           1
+ n_initiators_trial_wf           1
+ n_truncate_trial_wf           1
+diagonalize_ham (heg) =   0
+trial_wf_iters, norb_trial_wf, n_initiators_trial_wf, n_truncate_trial_wf:   1  81        1        1
+
+BEG OF allocate dtm_hb CP, REAL TIME                                    0.01       0.01        0        0, Mem avail 29232.89 29136.97 29136.97
+END OF allocate dtm_hb CP, REAL TIME                                    0.01       0.00        0        0, Mem avail 29232.89 29136.97 29136.97
+ Processing same spin. p =            1
+ Processing same spin. p =            2
+ Processing same spin. p =            3
+ Processing same spin. p =            4
+ Processing same spin. p =            5
+ Processing same spin. p =            6
+ Processing same spin. p =            7
+ Processing same spin. p =            8
+ Processing same spin. p =            9
+ Processing same spin. p =           10
+ Processing same spin. p =           11
+ Processing same spin. p =           12
+ Processing same spin. p =           13
+ Processing same spin. p =           14
+ Processing same spin. p =           15
+ Processing same spin. p =           16
+ Processing same spin. p =           17
+ Processing same spin. p =           18
+ Processing same spin. p =           19
+ Processing opposite spin. p =            1
+ Processing opposite spin. p =            2
+ Processing opposite spin. p =            3
+ Processing opposite spin. p =            4
+ Processing opposite spin. p =            5
+ Processing opposite spin. p =            6
+ Processing opposite spin. p =            7
+ Processing opposite spin. p =            8
+ Processing opposite spin. p =            9
+ Processing opposite spin. p =           10
+ Processing opposite spin. p =           11
+ Processing opposite spin. p =           12
+ Processing opposite spin. p =           13
+ Processing opposite spin. p =           14
+ Processing opposite spin. p =           15
+ Processing opposite spin. p =           16
+ Processing opposite spin. p =           17
+ Processing opposite spin. p =           18
+ Processing opposite spin. p =           19
+           1           0           0  0.16386061278405106     
+           0          -1           0  0.16386061278405106     
+          -1           0           0  0.16386061278405106     
+           0           1           0  0.16386061278405106     
+           0           0          -1  0.16386061278405106     
+           0           0           1  0.16386061278405106     
+           1           0           1  8.19303063920255314E-002
+          -1          -1           0  8.19303063920255314E-002
+           1           1           0  8.19303063920255314E-002
+          -1           0          -1  8.19303063920255314E-002
+           0           1           1  8.19303063920255314E-002
+           0          -1          -1  8.19303063920255314E-002
+           1          -1           0  8.19303063920255314E-002
+           1           0          -1  8.19303063920255314E-002
+           0           1          -1  8.19303063920255314E-002
+          -1           0           1  8.19303063920255314E-002
+           0          -1           1  8.19303063920255314E-002
+          -1           1           0  8.19303063920255314E-002
+          -1           1          -1  5.46202042613503497E-002
+          -1          -1          -1  5.46202042613503497E-002
+           1           1          -1  5.46202042613503497E-002
+          -1           1           1  5.46202042613503497E-002
+           1           1           1  5.46202042613503497E-002
+          -1          -1           1  5.46202042613503497E-002
+           1          -1          -1  5.46202042613503497E-002
+           1          -1           1  5.46202042613503497E-002
+           0           0           2  4.09651531960127657E-002
+           0          -2           0  4.09651531960127657E-002
+           2           0           0  4.09651531960127657E-002
+           0           2           0  4.09651531960127657E-002
+          -2           0           0  4.09651531960127657E-002
+           0           0          -2  4.09651531960127657E-002
+           0           2          -1  3.27721225568102098E-002
+          -1           2           0  3.27721225568102098E-002
+           1           0          -2  3.27721225568102098E-002
+           2           1           0  3.27721225568102098E-002
+           2           0           1  3.27721225568102098E-002
+           2           0          -1  3.27721225568102098E-002
+           1           2           0  3.27721225568102098E-002
+           0           2           1  3.27721225568102098E-002
+          -2           0           1  3.27721225568102098E-002
+          -2           1           0  3.27721225568102098E-002
+          -2          -1           0  3.27721225568102098E-002
+          -2           0          -1  3.27721225568102098E-002
+           0          -1          -2  3.27721225568102098E-002
+          -1           0           2  3.27721225568102098E-002
+           0          -1           2  3.27721225568102098E-002
+           1           0           2  3.27721225568102098E-002
+           0           1           2  3.27721225568102098E-002
+          -1           0          -2  3.27721225568102098E-002
+           2          -1           0  3.27721225568102098E-002
+           0           1          -2  3.27721225568102098E-002
+           0          -2          -1  3.27721225568102098E-002
+          -1          -2           0  3.27721225568102098E-002
+           0          -2           1  3.27721225568102098E-002
+           1          -2           0  3.27721225568102098E-002
+           1           2          -1  2.73101021306751748E-002
+          -1           1          -2  2.73101021306751748E-002
+           2          -1           1  2.73101021306751748E-002
+           1          -2          -1  2.73101021306751748E-002
+           1          -1          -2  2.73101021306751748E-002
+           2           1          -1  2.73101021306751748E-002
+          -1          -2           1  2.73101021306751748E-002
+          -2          -1          -1  2.73101021306751748E-002
+          -1          -1          -2  2.73101021306751748E-002
+           2           1           1  2.73101021306751748E-002
+           1           2           1  2.73101021306751748E-002
+          -1          -2          -1  2.73101021306751748E-002
+           1           1           2  2.73101021306751748E-002
+          -2           1          -1  2.73101021306751748E-002
+          -1           2           1  2.73101021306751748E-002
+          -2           1           1  2.73101021306751748E-002
+          -1           2          -1  2.73101021306751748E-002
+          -1          -1           2  2.73101021306751748E-002
+          -2          -1           1  2.73101021306751748E-002
+          -1           1           2  2.73101021306751748E-002
+           1          -2           1  2.73101021306751748E-002
+           1          -1           2  2.73101021306751748E-002
+           0          -2          -2  2.04825765980063829E-002
+          -2           2           0  2.04825765980063829E-002
+           2           2           0  2.04825765980063829E-002
+          -2           0          -2  2.04825765980063829E-002
+          -2           0           2  2.04825765980063829E-002
+           0          -2           2  2.04825765980063829E-002
+ Max double excitation magnitude=   42.048225052565400     
+
+BEG OF HCI_HEG CP, REAL TIME                                            0.01       0.00        0        0, Mem avail 29232.89 29136.99 29136.99
+
+Performing HCI with eps_var_sched=  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03  1.0000E-03, eps_pt=  2.0000E-07
+Computing  1 lowest-energy states
+Iteration   0        1 =  1.00E+00 dets, energy=       58.592675
+ Allocating shared memory of size                    8
+
+BEG OF variational part CP, REAL TIME                                   0.02       0.00        0        0, Mem avail 29231.87 29135.74 29135.74
+
+HCI iter=  1 eps_var=  1.0000E-03
+
+BEG OF get_next_det_list CP, REAL TIME                                  0.02       0.00        0        0, Mem avail 29231.87 29135.74 29135.74
+n_connected_dets,n_ref=         0         1
+allocating dets_up etc. arrays of size         2 = 2.0000E+00
+allocating (for merging) iorder etc. arrays of size         0 = 0.0000E+00
+reallocating dets_up etc. arrays of size       279 = 2.7900E+02
+
+After allocating dets_up of size       279, Memory avail (MB)=                                                       29231.87 29135.79 29135.79
+
+After allocating dets_dn of size       279, Memory avail (MB)=                                                       29231.87 29135.79 29135.79
+
+After allocating old_dets_up of size       279, Memory avail (MB)=                                                   29231.87 29135.80 29135.80
+
+After allocating old_dets_dn of size       279, Memory avail (MB)=                                                   29231.87 29135.80 29135.80
+ Allocating shared memory of size                 2216
+END OF get_next_det_list CP, REAL TIME                                  0.03       0.01        0        0, Mem avail 29231.87 29135.86 29135.86
+
+BEG OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.03       0.00        0        0, Mem avail 29231.87 29135.86 29135.86
+
+BEG OF generate_sparse_ham_heg_upper_triangular CP, REAL TIME           0.04       0.00        0        0, Mem avail 29231.87 29135.90 29135.90
+Constructing sparse Hamiltonian using partial connections
+allocating H_indices etc. arrays of size nonzero_elements (estimated)=      4610 = 4.61E+03 in generate_sparse_ham_chem
+
+BEG OF allocating H_indices etc. CP, REAL TIME                          0.04       0.00        0        0, Mem avail 29231.87 29135.91 29135.91
+END OF allocating H_indices etc. CP, REAL TIME                          0.04       0.00        0        0, Mem avail 29231.87 29135.85 29135.85
+
+BEG OF create beta and alpha-1 helper lists CP, REAL TIME               0.04       0.00        0        0, Mem avail 29231.87 29135.85 29135.85
+END OF create beta and alpha-1 helper lists CP, REAL TIME               0.05       0.00        0        0, Mem avail 29231.36 29135.40 29135.40
+
+n_det=         277  2.77E+02, # of nonzero elem in H=          3511  3.51E+03, average # of nonzero elem=    12.7
+
+END OF generate_sparse_heg_heg_upper_triangular CP, REAL TIME           0.06       0.01        0        0, Mem avail 29231.36 29135.36 29135.36
+
+Performing Davidson using sparsely stored H and matrix_lanczos in more_tools, n_det=       277  2.77E+02
+
+BEG OF davidson_sparse CP, REAL TIME                                    0.06       0.00        0        0, Mem avail 29231.36 29135.37 29135.37
+
+Executing davidson_sparse in more_tools.f90
+Iteration, Eigenvalues=  1    58.592674968
+Iteration, Eigenvalues=  2    58.283365868
+Iteration, Eigenvalues=  3    58.282597355
+Iteration, Eigenvalues=  4    58.282596705
+Iteration, Eigenvalues=  5    58.282596705
+davidson_sparse: n, iter, Lowest eigenvalue =       277   6    58.2825967049
+END OF davidson_sparse CP, REAL TIME                                    0.07       0.00        0        0, Mem avail 29231.36 29133.24 29133.24
+
+Wavefunction has     277 determinants
+
+Lowest eigenvalues=    58.282597
+
+Excit_level  # dets  sum_w2_excit_level
+       0       1    0.975642
+       2     276    0.024358
+
+Orbital sum_w2_orb
+     1    1.999744
+     2    1.991923
+     3    1.991923
+     4    1.991923
+     5    1.991923
+     6    1.991923
+     7    1.991923
+     8    0.004060
+     9    0.004060
+    10    0.004060
+    11    0.004060
+    12    0.004060
+    13    0.004060
+    14    0.004060
+    15    0.004060
+    16    0.004060
+    17    0.004060
+    18    0.004060
+    19    0.004060
+END OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.07       0.00        0        0, Mem avail 29231.36 29133.24 29133.24
+Iteration   1      277 =  2.77E+02 dets, energy=       58.282597
+
+HCI iter=  2 eps_var=  1.0000E-03
+
+BEG OF get_next_det_list CP, REAL TIME                                  0.07       0.00        0        0, Mem avail 29231.36 29133.25 29133.25
+n_connected_dets,n_ref=         0       277
+allocating dets_up etc. arrays of size     33938 = 3.3938E+04
+ Allocating shared memory of size                75800
+END OF get_next_det_list CP, REAL TIME                                  0.09       0.02        0        0, Mem avail 29228.31 29132.29 29132.29
+
+BEG OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.10       0.00        0        0, Mem avail 29228.31 29132.29 29132.29
+
+BEG OF generate_sparse_ham_heg_upper_triangular CP, REAL TIME           0.10       0.00        0        0, Mem avail 29228.31 29132.29 29132.29
+Constructing sparse Hamiltonian using partial connections
+allocating H_indices etc. arrays of size nonzero_elements (estimated)=    157695 = 1.58E+05 in generate_sparse_ham_chem
+
+BEG OF allocating H_indices etc. CP, REAL TIME                          0.10       0.00        0        0, Mem avail 29228.31 29132.29 29132.29
+END OF allocating H_indices etc. CP, REAL TIME                          0.11       0.00        0        0, Mem avail 29225.78 29129.75 29129.75
+
+BEG OF create beta and alpha-1 helper lists CP, REAL TIME               0.11       0.00        0        0, Mem avail 29225.78 29129.75 29129.75
+END OF create beta and alpha-1 helper lists CP, REAL TIME               0.12       0.01        0        0, Mem avail 29224.76 29128.90 29128.90
+Reallocating from size        157695 to size        222980
+
+n_det=        9475  9.48E+03, # of nonzero elem in H=        165193  1.65E+05, average # of nonzero elem=    17.4
+
+END OF generate_sparse_heg_heg_upper_triangular CP, REAL TIME           0.83       0.71        1        1, Mem avail 29219.61 29121.99 29121.99
+
+Performing Davidson using sparsely stored H and matrix_lanczos in more_tools, n_det=      9475  9.48E+03
+
+BEG OF davidson_sparse CP, REAL TIME                                    0.83       0.00        1        0, Mem avail 29219.61 29121.99 29121.99
+
+Executing davidson_sparse in more_tools.f90
+Iteration, Eigenvalues=  1    58.282596705
+Iteration, Eigenvalues=  2    58.277016054
+Iteration, Eigenvalues=  3    58.276908475
+Iteration, Eigenvalues=  4    58.276906107
+Iteration, Eigenvalues=  5    58.276906085
+Iteration, Eigenvalues=  6    58.276906085
+davidson_sparse: n, iter, Lowest eigenvalue =      9475   7    58.2769060846
+END OF davidson_sparse CP, REAL TIME                                    0.84       0.01        1        0, Mem avail 29212.82 29043.52 29043.52
+
+Wavefunction has    9475 determinants
+
+Lowest eigenvalues=    58.276906
+
+Excit_level  # dets  sum_w2_excit_level
+       0       1    0.974536
+       2     276    0.025224
+       3    1464    0.000016
+       4    7734    0.000224
+
+Orbital sum_w2_orb
+     1    1.999716
+     2    1.991482
+     3    1.991482
+     4    1.991482
+     5    1.991482
+     6    1.991482
+     7    1.991482
+     8    0.004283
+     9    0.004283
+    10    0.004283
+    11    0.004283
+    12    0.004283
+    13    0.004283
+    14    0.004283
+    15    0.004283
+    16    0.004283
+    17    0.004283
+    18    0.004283
+    19    0.004283
+END OF diagonalize_sparse_hamiltonian_heg CP, REAL TIME                 0.84       0.00        1        0, Mem avail 29219.42 29119.25 29043.45
+Iteration   2     9475 =  9.48E+03 dets, energy=       58.276906
+
+HCI iter=  3 eps_var=  1.0000E-03
+
+BEG OF get_next_det_list CP, REAL TIME                                  0.84       0.00        1        0, Mem avail 29219.42 29119.51 29043.71
+n_connected_dets,n_ref=         0      9475
+allocating dets_up etc. arrays of size     50028 = 5.0028E+04
+ Allocating shared memory of size                75800
+END OF get_next_det_list CP, REAL TIME                                  0.88       0.04        1        0, Mem avail 29219.42 29119.77 29043.97
+Exiting variational part because of energy criterion
+END OF variational part CP, REAL TIME                                   0.88       0.00        1        0, Mem avail 29219.42 29119.77 29043.97
+ Deallocating Hamiltonian
+
+Final Iteration   2     9475 =  9.48E+03 dets, energy=       58.276906
+Final variational wavefunctions (20 sorted by label):
+           1 127 127  0.98718577952144071     
+           2 127 699 -8.27831715153684936E-003
+           3 127 1245 -8.27831715153684936E-003
+           4 127 1327 -1.00594078586842672E-002
+           5 127 1401  1.00594078586842672E-002
+           6 127 1639 -8.27831715153685456E-003
+           7 127 2335  8.27831715153685456E-003
+           8 127 2647  1.00594078586842672E-002
+           9 127 2681  1.00594078586842672E-002
+          10 127 4271 -1.00594078586842672E-002
+          11 127 4311 -1.00594078586842672E-002
+          12 127 4467 -8.27831715153685456E-003
+          13 127 6253 -8.27831715153685456E-003
+          14 127 8759 -8.27831715153684936E-003
+          15 127 12405 -8.27831715153684936E-003
+          16 127 16731 -8.27831715153684936E-003
+          17 127 17003  8.27831715153684936E-003
+          18 127 24669  8.27831715153684242E-003
+          19 127 33909  8.27831715153684936E-003
+          20 127 34877 -8.27831715153685456E-003
+
+Before det. PT, avail, avail2, avail3=                                                                               29220.44 29125.10 29043.14
+
+n_max_connections:   110000000 =  1.10E+08
+
+Computing PT correction for state number   1
+
+If eps_pt=     2.0000E-07 estimated number of connections to variational wavefn=     1911865 =  1.91E+06
+If eps_pt_big= 8.1920E-04 estimated number of connections to variational wavefn=       37994 =  3.80E+04
+
+Computing deterministic part of PT first with eps_pt_big=  8.1920E-04
+
+BEG OF Compute deterministic 2nd-order PT correction CP, REAL TIM       0.91       0.03        1        0, Mem avail 29220.44 29125.12 29043.15
+n_connected_dets,n_ref=         0      9475
+allocating dets_up etc. arrays of size     56992 = 5.6992E+04
+Total number of connected dets=       13159 =  1.32E+04
+END OF Compute deterministic 2nd-order PT correction CP, REAL TIM       0.98       0.07        1        0, Mem avail 29219.42 29123.66 29043.06
+
+PT_correction, eps_pt_big, ndets_connected for short deterministic run=   -0.000199339  8.1920E-04       13159 =  1.32E+04
+
+Computing PT energy using single-list stochastic method with N_MC=   200 determinants per sample
+
+BEG OF Compute 2nd-order energy correction using Alias method CP,       0.99       0.00        1        0, Mem avail 29219.42 29123.67 29043.07
+Performing stochastic PT until error bar drops below  1.00E-05
+This is the difference between the PT correction for eps_pt and eps_pt_big
+
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43602 = 4.3602E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     1   -0.000628947 -0.00062895    58.27607780 +-         NaN
+n_connected_dets,n_ref=         0       134
+allocating dets_up etc. arrays of size     43160 = 4.3160E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     2   -0.000488905 -0.00055893    58.27614782 +-  0.00007002
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45145 = 4.5145E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     3   -0.000786277 -0.00063471    58.27607204 +-  0.00008589
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45337 = 4.5337E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     4   -0.000940695 -0.00071121    58.27599554 +-  0.00009768
+n_connected_dets,n_ref=         0       142
+allocating dets_up etc. arrays of size     45417 = 4.5417E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     5   -0.000707866 -0.00071054    58.27599621 +-  0.00007566
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44393 = 4.4393E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     6   -0.000726170 -0.00071314    58.27599360 +-  0.00006183
+n_connected_dets,n_ref=         0       147
+allocating dets_up etc. arrays of size     47114 = 4.7114E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     7   -0.000556448 -0.00069076    58.27601599 +-  0.00005685
+n_connected_dets,n_ref=         0       142
+allocating dets_up etc. arrays of size     45552 = 4.5552E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     8   -0.000810533 -0.00070573    58.27600102 +-  0.00005146
+n_connected_dets,n_ref=         0       131
+allocating dets_up etc. arrays of size     42194 = 4.2194E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=     9   -0.000587375 -0.00069258    58.27601417 +-  0.00004725
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44573 = 4.4573E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    10   -0.000820404 -0.00070536    58.27600138 +-  0.00004415
+n_connected_dets,n_ref=         0       144
+allocating dets_up etc. arrays of size     46090 = 4.6090E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    11   -0.000690711 -0.00070403    58.27600272 +-  0.00003996
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     44400 = 4.4400E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    12   -0.000462547 -0.00068391    58.27602284 +-  0.00004166
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     42770 = 4.2770E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    13   -0.000586748 -0.00067643    58.27603031 +-  0.00003904
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     44904 = 4.4904E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    14   -0.000610007 -0.00067169    58.27603506 +-  0.00003646
+n_connected_dets,n_ref=         0       144
+allocating dets_up etc. arrays of size     46796 = 4.6796E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    15   -0.000804998 -0.00068058    58.27602617 +-  0.00003508
+n_connected_dets,n_ref=         0       135
+allocating dets_up etc. arrays of size     43638 = 4.3638E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    16   -0.000799452 -0.00068801    58.27601874 +-  0.00003365
+n_connected_dets,n_ref=         0       149
+allocating dets_up etc. arrays of size     48054 = 4.8054E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    17   -0.000802500 -0.00069474    58.27601201 +-  0.00003232
+n_connected_dets,n_ref=         0       130
+allocating dets_up etc. arrays of size     42112 = 4.2112E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    18   -0.000801510 -0.00070067    58.27600607 +-  0.00003104
+n_connected_dets,n_ref=         0       137
+allocating dets_up etc. arrays of size     44044 = 4.4044E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    19   -0.000666071 -0.00069885    58.27600789 +-  0.00002942
+n_connected_dets,n_ref=         0       143
+allocating dets_up etc. arrays of size     46113 = 4.6113E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    20   -0.000670201 -0.00069742    58.27600933 +-  0.00002795
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     44902 = 4.4902E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    21   -0.000704957 -0.00069778    58.27600897 +-  0.00002658
+n_connected_dets,n_ref=         0       145
+allocating dets_up etc. arrays of size     46660 = 4.6660E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    22   -0.000792303 -0.00070207    58.27600467 +-  0.00002571
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43723 = 4.3723E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    23   -0.000811905 -0.00070685    58.27599990 +-  0.00002503
+n_connected_dets,n_ref=         0       143
+allocating dets_up etc. arrays of size     46344 = 4.6344E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    24   -0.000850243 -0.00071282    58.27599392 +-  0.00002469
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44898 = 4.4898E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    25   -0.000748785 -0.00071426    58.27599248 +-  0.00002373
+n_connected_dets,n_ref=         0       131
+allocating dets_up etc. arrays of size     41830 = 4.1830E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    26   -0.000539037 -0.00070752    58.27599922 +-  0.00002377
+n_connected_dets,n_ref=         0       137
+allocating dets_up etc. arrays of size     44106 = 4.4106E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    27   -0.000718286 -0.00070792    58.27599882 +-  0.00002288
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42300 = 4.2300E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    28   -0.000581580 -0.00070341    58.27600334 +-  0.00002250
+n_connected_dets,n_ref=         0       145
+allocating dets_up etc. arrays of size     46481 = 4.6481E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    29   -0.000738876 -0.00070463    58.27600211 +-  0.00002175
+n_connected_dets,n_ref=         0       134
+allocating dets_up etc. arrays of size     43438 = 4.3438E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    30   -0.000865331 -0.00070999    58.27599676 +-  0.00002168
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     42587 = 4.2587E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    31   -0.000538643 -0.00070446    58.27600228 +-  0.00002169
+n_connected_dets,n_ref=         0       126
+allocating dets_up etc. arrays of size     40317 = 4.0317E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    32   -0.000610493 -0.00070153    58.27600522 +-  0.00002120
+n_connected_dets,n_ref=         0       144
+allocating dets_up etc. arrays of size     46452 = 4.6452E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    33   -0.000698143 -0.00070142    58.27600532 +-  0.00002055
+n_connected_dets,n_ref=         0       126
+allocating dets_up etc. arrays of size     40708 = 4.0708E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    34   -0.000710702 -0.00070170    58.27600505 +-  0.00001994
+n_connected_dets,n_ref=         0       135
+allocating dets_up etc. arrays of size     43476 = 4.3476E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    35   -0.000780619 -0.00070395    58.27600279 +-  0.00001949
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44403 = 4.4403E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    36   -0.000893283 -0.00070921    58.27599754 +-  0.00001966
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45195 = 4.5195E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    37   -0.000642637 -0.00070741    58.27599933 +-  0.00001921
+n_connected_dets,n_ref=         0       135
+allocating dets_up etc. arrays of size     43719 = 4.3719E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    38   -0.000853928 -0.00071127    58.27599548 +-  0.00001909
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     46153 = 4.6153E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    39   -0.000929726 -0.00071687    58.27598988 +-  0.00001942
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44453 = 4.4453E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    40   -0.000698192 -0.00071640    58.27599034 +-  0.00001893
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45160 = 4.5160E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    41   -0.000604972 -0.00071368    58.27599306 +-  0.00001866
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42966 = 4.2966E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    42   -0.000742329 -0.00071437    58.27599238 +-  0.00001823
+n_connected_dets,n_ref=         0       146
+allocating dets_up etc. arrays of size     46850 = 4.6850E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    43   -0.000596219 -0.00071162    58.27599513 +-  0.00001801
+n_connected_dets,n_ref=         0       134
+allocating dets_up etc. arrays of size     43291 = 4.3291E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    44   -0.000596721 -0.00070901    58.27599774 +-  0.00001779
+n_connected_dets,n_ref=         0       123
+allocating dets_up etc. arrays of size     39486 = 3.9486E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    45   -0.000496986 -0.00070429    58.27600245 +-  0.00001801
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43908 = 4.3908E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    46   -0.000671768 -0.00070359    58.27600316 +-  0.00001763
+n_connected_dets,n_ref=         0       127
+allocating dets_up etc. arrays of size     41170 = 4.1170E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    47   -0.000721124 -0.00070396    58.27600278 +-  0.00001726
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44376 = 4.4376E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    48   -0.000791753 -0.00070579    58.27600096 +-  0.00001699
+n_connected_dets,n_ref=         0       129
+allocating dets_up etc. arrays of size     41422 = 4.1422E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    49   -0.000657718 -0.00070481    58.27600194 +-  0.00001667
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42752 = 4.2752E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    50   -0.001015814 -0.00071103    58.27599572 +-  0.00001748
+n_connected_dets,n_ref=         0       127
+allocating dets_up etc. arrays of size     41214 = 4.1214E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    51   -0.000964598 -0.00071600    58.27599074 +-  0.00001784
+n_connected_dets,n_ref=         0       150
+allocating dets_up etc. arrays of size     48629 = 4.8629E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    52   -0.000696998 -0.00071564    58.27599111 +-  0.00001750
+n_connected_dets,n_ref=         0       126
+allocating dets_up etc. arrays of size     40846 = 4.0846E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    53   -0.000745677 -0.00071620    58.27599054 +-  0.00001717
+n_connected_dets,n_ref=         0       142
+allocating dets_up etc. arrays of size     45843 = 4.5843E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    54   -0.000670995 -0.00071536    58.27599138 +-  0.00001687
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     44292 = 4.4292E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    55   -0.000769090 -0.00071634    58.27599040 +-  0.00001659
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     44614 = 4.4614E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    56   -0.000704679 -0.00071613    58.27599061 +-  0.00001629
+n_connected_dets,n_ref=         0       139
+allocating dets_up etc. arrays of size     45334 = 4.5334E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    57   -0.000844180 -0.00071838    58.27598837 +-  0.00001616
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44817 = 4.4817E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    58   -0.000839615 -0.00072047    58.27598628 +-  0.00001602
+n_connected_dets,n_ref=         0       125
+allocating dets_up etc. arrays of size     40065 = 4.0065E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    59   -0.000483767 -0.00071646    58.27599029 +-  0.00001625
+n_connected_dets,n_ref=         0       135
+allocating dets_up etc. arrays of size     43561 = 4.3561E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    60   -0.000655299 -0.00071544    58.27599131 +-  0.00001601
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45481 = 4.5481E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    61   -0.000670708 -0.00071471    58.27599204 +-  0.00001576
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45713 = 4.5713E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    62   -0.000846359 -0.00071683    58.27598992 +-  0.00001565
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44939 = 4.4939E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    63   -0.000841645 -0.00071881    58.27598794 +-  0.00001552
+n_connected_dets,n_ref=         0       148
+allocating dets_up etc. arrays of size     47836 = 4.7836E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    64   -0.000821039 -0.00072041    58.27598634 +-  0.00001536
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43786 = 4.3786E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    65   -0.000755215 -0.00072094    58.27598580 +-  0.00001513
+n_connected_dets,n_ref=         0       145
+allocating dets_up etc. arrays of size     46086 = 4.6086E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    66   -0.000485737 -0.00071738    58.27598937 +-  0.00001532
+n_connected_dets,n_ref=         0       139
+allocating dets_up etc. arrays of size     44410 = 4.4410E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    67   -0.000704744 -0.00071719    58.27598955 +-  0.00001509
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44329 = 4.4329E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    68   -0.000763245 -0.00071787    58.27598888 +-  0.00001489
+n_connected_dets,n_ref=         0       139
+allocating dets_up etc. arrays of size     44848 = 4.4848E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    69   -0.000672078 -0.00071720    58.27598954 +-  0.00001468
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43262 = 4.3262E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    70   -0.000552349 -0.00071485    58.27599190 +-  0.00001466
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45768 = 4.5768E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    71   -0.000836577 -0.00071656    58.27599018 +-  0.00001456
+n_connected_dets,n_ref=         0       144
+allocating dets_up etc. arrays of size     46586 = 4.6586E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    72   -0.000582006 -0.00071469    58.27599205 +-  0.00001447
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     43369 = 4.3369E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    73   -0.000807180 -0.00071596    58.27599078 +-  0.00001433
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42839 = 4.2839E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    74   -0.000797930 -0.00071707    58.27598968 +-  0.00001418
+n_connected_dets,n_ref=         0       143
+allocating dets_up etc. arrays of size     46604 = 4.6604E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    75   -0.001051621 -0.00072153    58.27598522 +-  0.00001468
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44724 = 4.4724E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    76   -0.000713563 -0.00072143    58.27598532 +-  0.00001449
+n_connected_dets,n_ref=         0       130
+allocating dets_up etc. arrays of size     42129 = 4.2129E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    77   -0.000681749 -0.00072091    58.27598584 +-  0.00001431
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43951 = 4.3951E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    78   -0.000740887 -0.00072117    58.27598558 +-  0.00001413
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45411 = 4.5411E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    79   -0.000837078 -0.00072263    58.27598411 +-  0.00001402
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     42784 = 4.2784E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    80   -0.000527054 -0.00072019    58.27598656 +-  0.00001406
+n_connected_dets,n_ref=         0       146
+allocating dets_up etc. arrays of size     47085 = 4.7085E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    81   -0.000707904 -0.00072004    58.27598671 +-  0.00001389
+n_connected_dets,n_ref=         0       145
+allocating dets_up etc. arrays of size     45668 = 4.5668E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    82   -0.000370898 -0.00071578    58.27599097 +-  0.00001436
+n_connected_dets,n_ref=         0       144
+allocating dets_up etc. arrays of size     46437 = 4.6437E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    83   -0.000751415 -0.00071621    58.27599054 +-  0.00001419
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45074 = 4.5074E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    84   -0.000616132 -0.00071502    58.27599173 +-  0.00001407
+n_connected_dets,n_ref=         0       139
+allocating dets_up etc. arrays of size     45048 = 4.5048E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    85   -0.000671880 -0.00071451    58.27599224 +-  0.00001392
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44420 = 4.4420E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    86   -0.000687563 -0.00071420    58.27599255 +-  0.00001376
+n_connected_dets,n_ref=         0       137
+allocating dets_up etc. arrays of size     44209 = 4.4209E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    87   -0.000854503 -0.00071581    58.27599094 +-  0.00001369
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44372 = 4.4372E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    88   -0.000641743 -0.00071497    58.27599178 +-  0.00001356
+n_connected_dets,n_ref=         0       149
+allocating dets_up etc. arrays of size     47992 = 4.7992E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    89   -0.000801483 -0.00071594    58.27599081 +-  0.00001345
+n_connected_dets,n_ref=         0       146
+allocating dets_up etc. arrays of size     46997 = 4.6997E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    90   -0.000834770 -0.00071726    58.27598949 +-  0.00001336
+n_connected_dets,n_ref=         0       147
+allocating dets_up etc. arrays of size     47350 = 4.7350E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    91   -0.000813661 -0.00071832    58.27598843 +-  0.00001326
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45257 = 4.5257E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    92   -0.000720981 -0.00071835    58.27598840 +-  0.00001311
+n_connected_dets,n_ref=         0       143
+allocating dets_up etc. arrays of size     46089 = 4.6089E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    93   -0.000652229 -0.00071764    58.27598911 +-  0.00001299
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     44015 = 4.4015E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    94   -0.000690021 -0.00071734    58.27598940 +-  0.00001285
+n_connected_dets,n_ref=         0       150
+allocating dets_up etc. arrays of size     48912 = 4.8912E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    95   -0.000814079 -0.00071836    58.27598838 +-  0.00001276
+n_connected_dets,n_ref=         0       148
+allocating dets_up etc. arrays of size     48107 = 4.8107E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    96   -0.000774408 -0.00071895    58.27598780 +-  0.00001264
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44579 = 4.4579E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    97   -0.000931268 -0.00072113    58.27598561 +-  0.00001270
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44343 = 4.4343E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    98   -0.000793366 -0.00072187    58.27598487 +-  0.00001259
+n_connected_dets,n_ref=         0       137
+allocating dets_up etc. arrays of size     44369 = 4.4369E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=    99   -0.000740708 -0.00072206    58.27598468 +-  0.00001246
+n_connected_dets,n_ref=         0       134
+allocating dets_up etc. arrays of size     43170 = 4.3170E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   100   -0.000790754 -0.00072275    58.27598400 +-  0.00001236
+n_connected_dets,n_ref=         0       139
+allocating dets_up etc. arrays of size     45069 = 4.5069E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   101   -0.000906273 -0.00072457    58.27598218 +-  0.00001237
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     43033 = 4.3033E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   102   -0.000757458 -0.00072489    58.27598186 +-  0.00001225
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     42710 = 4.2710E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   103   -0.000607475 -0.00072375    58.27598300 +-  0.00001218
+n_connected_dets,n_ref=         0       152
+allocating dets_up etc. arrays of size     48443 = 4.8443E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   104   -0.000747616 -0.00072398    58.27598277 +-  0.00001207
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45181 = 4.5181E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   105   -0.000740861 -0.00072414    58.27598261 +-  0.00001195
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45322 = 4.5322E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   106   -0.000880025 -0.00072561    58.27598114 +-  0.00001193
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45210 = 4.5210E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   107   -0.000783728 -0.00072615    58.27598059 +-  0.00001183
+n_connected_dets,n_ref=         0       135
+allocating dets_up etc. arrays of size     43381 = 4.3381E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   108   -0.000600395 -0.00072499    58.27598176 +-  0.00001178
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     42840 = 4.2840E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   109   -0.000520668 -0.00072311    58.27598363 +-  0.00001182
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43386 = 4.3386E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   110   -0.000604905 -0.00072204    58.27598471 +-  0.00001176
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45510 = 4.5510E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   111   -0.000661369 -0.00072149    58.27598525 +-  0.00001167
+n_connected_dets,n_ref=         0       143
+allocating dets_up etc. arrays of size     46314 = 4.6314E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   112   -0.000634035 -0.00072071    58.27598603 +-  0.00001159
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42692 = 4.2692E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   113   -0.000708410 -0.00072060    58.27598614 +-  0.00001149
+n_connected_dets,n_ref=         0       137
+allocating dets_up etc. arrays of size     44293 = 4.4293E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   114   -0.000793364 -0.00072124    58.27598550 +-  0.00001140
+n_connected_dets,n_ref=         0       147
+allocating dets_up etc. arrays of size     47491 = 4.7491E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   115   -0.000646168 -0.00072059    58.27598616 +-  0.00001132
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44198 = 4.4198E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   116   -0.000611319 -0.00071965    58.27598710 +-  0.00001126
+n_connected_dets,n_ref=         0       138
+allocating dets_up etc. arrays of size     44409 = 4.4409E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   117   -0.000657804 -0.00071912    58.27598763 +-  0.00001118
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     44055 = 4.4055E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   118   -0.000858852 -0.00072030    58.27598644 +-  0.00001115
+n_connected_dets,n_ref=         0       141
+allocating dets_up etc. arrays of size     45546 = 4.5546E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   119   -0.000725267 -0.00072034    58.27598640 +-  0.00001105
+n_connected_dets,n_ref=         0       131
+allocating dets_up etc. arrays of size     42253 = 4.2253E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   120   -0.000873873 -0.00072162    58.27598512 +-  0.00001104
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     44117 = 4.4117E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   121   -0.000701143 -0.00072145    58.27598529 +-  0.00001095
+n_connected_dets,n_ref=         0       145
+allocating dets_up etc. arrays of size     46853 = 4.6853E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   122   -0.000846013 -0.00072247    58.27598427 +-  0.00001090
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43711 = 4.3711E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   123   -0.000743118 -0.00072264    58.27598410 +-  0.00001082
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45156 = 4.5156E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   124   -0.000777229 -0.00072308    58.27598366 +-  0.00001074
+n_connected_dets,n_ref=         0       135
+allocating dets_up etc. arrays of size     43436 = 4.3436E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   125   -0.000616886 -0.00072223    58.27598451 +-  0.00001068
+n_connected_dets,n_ref=         0       143
+allocating dets_up etc. arrays of size     45984 = 4.5984E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   126   -0.000835841 -0.00072313    58.27598361 +-  0.00001064
+n_connected_dets,n_ref=         0       142
+allocating dets_up etc. arrays of size     45679 = 4.5679E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   127   -0.000927917 -0.00072475    58.27598200 +-  0.00001068
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42274 = 4.2274E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   128   -0.000804796 -0.00072537    58.27598137 +-  0.00001061
+n_connected_dets,n_ref=         0       131
+allocating dets_up etc. arrays of size     42512 = 4.2512E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   129   -0.000803230 -0.00072598    58.27598077 +-  0.00001055
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     44070 = 4.4070E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   130   -0.000982737 -0.00072795    58.27597879 +-  0.00001065
+n_connected_dets,n_ref=         0       151
+allocating dets_up etc. arrays of size     48545 = 4.8545E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   131   -0.000696458 -0.00072771    58.27597903 +-  0.00001057
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43915 = 4.3915E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   132   -0.000767515 -0.00072801    58.27597873 +-  0.00001049
+n_connected_dets,n_ref=         0       130
+allocating dets_up etc. arrays of size     42020 = 4.2020E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   133   -0.000602810 -0.00072707    58.27597967 +-  0.00001046
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     45135 = 4.5135E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   134   -0.000691335 -0.00072680    58.27597994 +-  0.00001038
+n_connected_dets,n_ref=         0       132
+allocating dets_up etc. arrays of size     42457 = 4.2457E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   135   -0.000799781 -0.00072734    58.27597940 +-  0.00001032
+n_connected_dets,n_ref=         0       134
+allocating dets_up etc. arrays of size     43395 = 4.3395E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   136   -0.000844878 -0.00072821    58.27597854 +-  0.00001028
+n_connected_dets,n_ref=         0       136
+allocating dets_up etc. arrays of size     43482 = 4.3482E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   137   -0.000583018 -0.00072715    58.27597960 +-  0.00001026
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     44893 = 4.4893E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   138   -0.000741573 -0.00072725    58.27597949 +-  0.00001019
+n_connected_dets,n_ref=         0       140
+allocating dets_up etc. arrays of size     44963 = 4.4963E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   139   -0.000662006 -0.00072678    58.27597996 +-  0.00001012
+n_connected_dets,n_ref=         0       133
+allocating dets_up etc. arrays of size     43044 = 4.3044E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   140   -0.000804756 -0.00072734    58.27597940 +-  0.00001007
+n_connected_dets,n_ref=         0       144
+allocating dets_up etc. arrays of size     46170 = 4.6170E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   141   -0.000915641 -0.00072868    58.27597807 +-  0.00001008
+n_connected_dets,n_ref=         0       145
+allocating dets_up etc. arrays of size     46479 = 4.6479E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   142   -0.000731717 -0.00072870    58.27597805 +-  0.00001001
+n_connected_dets,n_ref=         0       148
+allocating dets_up etc. arrays of size     47297 = 4.7297E+04
+Sample, E_2pt_now, E_2pt estimate, total energy=   143   -0.000829319 -0.00072940    58.27597734 +-  0.00000997
+END OF Compute 2nd-order energy correction using Alias method CP,      13.11      12.12       13       12, Mem avail 29221.47 29124.19 29048.54
+
+State   1:
+Variational energy=                   58.276906085
+Second-order PT energy lowering=      -0.000928741 +- 0.000009966 ( -0.000199339 -0.000729402)
+Total energy=                         58.275977344 +- 0.000009966
+ndets, ndets_connected(total), Variational, PT, Total Energies=     9475      23726    58.276906085   -0.000928741    58.275977344 +- 0.000009966
+Total energy (includ. Madelung)=      48.051823875 +- 0.000009966
+Correlation energy =                  -0.316697625 +- 0.000009966
+Correlation energy per electron =     -0.022621259
+END OF HCI_HEG CP, REAL TIME                                           13.11       0.00       13        0, Mem avail 29225.02 29129.88 29047.91
