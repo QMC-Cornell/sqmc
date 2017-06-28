@@ -1,0 +1,40 @@
+for r in 1.0 1.1 1.2 1.24253 1.3 1.4 1.6 1.8 2.0
+do
+dir=r$r
+dir2=/home/cyrus/sqmc/runs/chem/C2/v2z_curve/$dir
+echo $dir $dir2
+mkdir -p $dir2
+cwd1=`pwd`
+cd $dir
+cwd2=`pwd`
+echo 'cwd1, cwd2= ' $cwd1, $cwd2
+C2.py >& C2.out
+cd $dir2
+pwd
+ln -s $cwd2/FCIDUMP FCIDUMP
+head -2 FCIDUMP | tail -n 1 > orbsym
+
+ex orbsym <<_end
+1s/.*ORBSYM=//
+s;$; orbital_symmetries(1:norb)/;
+wq
+_end
+
+cp -a ../r1.0/[abir]* .
+
+cp aa.s aa
+ex aa <<_end
+/xx/
+.s;xx/;;
+.r orbsym
+-1j
+.s;/ ;/;
+wq
+_end
+
+./aa
+
+batch8.1000 i_sigma_g
+
+cd $cwd1
+done
