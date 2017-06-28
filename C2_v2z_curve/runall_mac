@@ -1,0 +1,34 @@
+for r in r1* r2*
+do
+cd $r
+
+head -2 FCIDUMP | tail -n 1 > orbsym
+
+ex orbsym <<_end
+1s/.*ORBSYM=//
+s;$; orbital_symmetries(1:norb)/;
+wq
+_end
+
+cp -a ../r1.0/[ai]* .
+
+cp aa.s aa
+ex aa <<_end
+/xx/
+.s;xx/;;
+.r orbsym
+-1j
+.s;/ ;/;
+wq
+_end
+
+cp i_1sigma_g_mac i_1sigma_g
+cp i_3pi_u_mac i_3pi_u
+
+./aa
+
+../../src/sqmc < i_1sigma_g > o_1sigma_g
+../../src/sqmc < i_3pi_u > o_3pi_u
+
+cd -
+done
