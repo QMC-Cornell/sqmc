@@ -24,6 +24,11 @@ LIBS = -llapack -lblas #$(LAPACK) $(BLAS)
  FFLAGS   = -finit-local-zero -O3 -ffixed-line-length-132 -Wall #-DMAC
  F90FLAGS = -finit-local-zero -O3 -ffree-line-length-none -cpp -x f95-cpp-input -Wall #-DMAC # -DNUM_ORBITALS_GT_127
 
+ifeq ($(system),Darwin)
+ FFLAGS   = -finit-local-zero -O3 -ffixed-line-length-132 -Wall -DMAC
+ F90FLAGS = -finit-local-zero -O3 -ffree-line-length-none -cpp -x f95-cpp-input -Wall -DMAC # -DNUM_ORBITALS_GT_127
+endif
+
 ifeq ($(system),Linux)
 
 # ifort flags
