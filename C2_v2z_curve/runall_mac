@@ -1,7 +1,7 @@
 for r in r1* r2*
 do
 cd $r
-
+pwd
 head -2 FCIDUMP | tail -n 1 > orbsym
 
 ex orbsym <<_end
@@ -10,7 +10,7 @@ s;$; orbital_symmetries(1:norb)/;
 wq
 _end
 
-cp -a ../r1.0/[ai]* .
+cp -a ../r1.0/[ai]* . 2>> /dev/null
 
 cp aa.s aa
 ex aa <<_end
@@ -22,13 +22,13 @@ ex aa <<_end
 wq
 _end
 
-cp i_1sigma_g_mac i_1sigma_g
-cp i_3pi_u_mac i_3pi_u
+cp i_1sigma_g_mac i_1sigma_g 2>>/dev/null
+cp i_3pi_u_mac i_3pi_u 2>>/dev/null
 
 ./aa
 
 ../../src/sqmc < i_1sigma_g > o_1sigma_g
 ../../src/sqmc < i_3pi_u > o_3pi_u
 
-cd -
+cd - > /dev/null
 done
