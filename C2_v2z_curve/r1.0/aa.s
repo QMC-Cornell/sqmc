@@ -1,6 +1,6 @@
 for file in i*
 do
-echo $file
+#echo $file
 ex $file <<_end
 1,\$s/.*orbital_symmetries(1:norb)/xx/
 wq
