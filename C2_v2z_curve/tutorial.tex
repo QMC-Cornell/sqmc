@@ -173,7 +173,7 @@ $^b$ University of Colorado, Boulder, CO}
 
 \maketitle
 
-There are presently two SHCI codes available for quantum chemistry problems-- one in Fortran developed by the Umrigar group
+There are presently two SHCI codes available for quantum chemistry (and periodic solids and in fact any system for which an integrals file is available)-- one in Fortran developed by the Umrigar group
 at Cornell (primarily by Adam Holmes, with very efficient parallelisation and other contributions by Matt Otten), and another in C++
 developed by the Sharma group at the University of Colorado.  There is also an SHCI program for treating the
 homogeneous electron gas developed in the Umrigar group by Junhao Li.
@@ -184,31 +184,32 @@ In this tutorial, we will compute a simplified version of this -- we will do the
 in a cc-pVDZ basis.
 
 \begin{enumerate}
-\item Download the code by typing:
+\item Download the code by typing:\vspace{-5mm}
 \begin{verbatim}
 git clone https://bitbucket.org/sqmc/hci.git --depth=1
 \end{verbatim}
 \item
-Compile the program:
+Compile the program:\vspace{-5mm}
 \begin{verbatim}
-cd src
+cd sqmc/hci/src
 make
 \end{verbatim}
 \item
 \begin{verbatim}
 cd ../C2_v2z_curve
 \end{verbatim}
-There are 2 input files (for $^1\Sigma_g$ and $^3\Pi_u$ symmetries and integrals files for 9 different geometries.  Take a look at one of these inputs.
+There are 2 input files (for $^1\Sigma_g$ and $^3\Pi_u$ symmetries) and integrals files for 9 different geometries.  Take a look at one of these inputs.
 The one for $^1\Sigma_g$ computes the 2 lowest states of that symmetry and the one for $^3\Pi_u$ computes just the lowest state.
 Run all these inputs by typing:
 \begin{verbatim}
 ./runall
+./runall_mac {\rm (on Macs)}
 \end{verbatim}
-\item Make tables of all these calculations:
+\item Make tables of all these calculations:\vspace{-5mm}
 \begin{verbatim}
 ./make_table
 \end{verbatim}
-\item Plot the energies in the tables:
+\item Plot the energies in the tables:\vspace{-5mm}
 \begin{verbatim}
 gnuplot < i.gnu
 evince pes_C2_2z.eps
@@ -228,7 +229,7 @@ Refs:
 A. A. Holmes, Norm Tubman and C. J. Umrigar, J. Chem. Theory Comput., {\bf 12}, 3674 (2016)
 
 2) Semistochastic Heat-Bath Configuration Interaction Method:
-Selected Configuration Interaction with Semistochastic Perturbation Theory
+Selected Configuration Interaction with Semistochastic Perturbation Theory,
 Sandeep Sharma, A. A. Holmes, G. Jeanmairet, A. Alavi and C. J. Umrigar, J. Chem. Theory Comput., {\bf 13}, 1595 (2017).
 
 \end{document}
